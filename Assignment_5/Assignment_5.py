@@ -4,8 +4,8 @@ class Employee:
         self.name = name
         self.salary = salary
 
-    def salary_update(self,new_salary):
-        self.salary= new_salary
+    def salary_update(self, new_salary):
+        self.salary = new_salary
         print("salary of " + self.name + " has been updated")
 
     def __del__(self):
