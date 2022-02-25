@@ -1,8 +1,12 @@
+# Recursive function for making the Pascal's triangle
 def triangle(n):
+    # if n = 0 then return empty list to avoid infinite loop
     if n == 0:
         return []
+    # if n = 1 return 1 which will be the base of the function
     elif n == 1:
         return [1]
+    # else calculate the row by add terms of previous row
     else:
         new_row = [1]
         last_row = triangle(n-1)
@@ -12,7 +16,9 @@ def triangle(n):
     return new_row
 
 
-row = int(input("Enter numbers of rows"))
+# ask user for number of rows for Pascal's triangle
+row = int(input("Enter numbers of rows "))
 
+# using a loop print the triangle
 for i in range(1, row + 1):
     print(triangle(i))
